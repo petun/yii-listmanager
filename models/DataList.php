@@ -11,6 +11,12 @@
  */
 class DataList extends ActiveRecord
 {
+
+	/* for giix improvement*/
+	public function label($count) {
+		return "Списки";
+	}
+
 	/**
 	 * @return string the associated database table name
 	 */
