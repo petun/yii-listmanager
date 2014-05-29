@@ -6,7 +6,7 @@ class DataListController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/main';
+	public $layout='//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -70,7 +70,7 @@ class DataListController extends Controller
 		if (isset($_POST['DataList'])) {
 			$model->attributes=$_POST['DataList'];
 			if ($model->save()) {
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index','DataList[type]'=> $model->type));
 			}
 		}
 
@@ -94,7 +94,7 @@ class DataListController extends Controller
 		if (isset($_POST['DataList'])) {
 			$model->attributes=$_POST['DataList'];
 			if ($model->save()) {
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index','DataList[type]'=> $model->type));
 			}
 		}
 

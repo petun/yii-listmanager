@@ -3,21 +3,20 @@
 /* @var $model DataList */
 ?>
 
+
+
 <?php
+
 $this->breadcrumbs=array(
-	'Data Lists'=>array('index'),
-	$model->name=>array('view','id'=>$model->id),
-	'Update',
+	Yii::t('DataListModule.main', 'Data Lists') => array('index'),
+	Yii::t('DataListModule.main','Update Item #').$model->id,
 );
 
 $this->menu=array(
-	array('label'=>'List DataList', 'url'=>array('index')),
-	array('label'=>'Create DataList', 'url'=>array('create')),
-	array('label'=>'View DataList', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage DataList', 'url'=>array('admin')),
+	array('label'=>Yii::t('DataListModule.main', 'Data Lists'), 'url'=>array('index')),
 );
 ?>
 
-    <h1>Update DataList <?php echo $model->id; ?></h1>
+    <h1><? echo Yii::t('DataListModule.main','Update Item #').$model->id; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -5,16 +5,15 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Data Lists'=>array('index'),
-	'Create',
+	Yii::t('DataListModule.main','Data Lists') => array('index'),
+	Yii::t('DataListModule.main','New Item List'),
 );
 
 $this->menu=array(
-	array('label'=>'List DataList', 'url'=>array('index')),
-	array('label'=>'Manage DataList', 'url'=>array('admin')),
+	array('label'=>Yii::t('DataListModule.main','Data Lists'), 'url'=>array('index')),
 );
 ?>
 
-<h1>Create DataList</h1>
+<h1><?=Yii::t('DataListModule.main','New Item List');?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

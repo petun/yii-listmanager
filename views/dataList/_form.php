@@ -15,18 +15,16 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-    <p class="help-block">Fields with <span class="required">*</span> are required.</p>
-
     <?php echo $form->errorSummary($model); ?>
 
-            <?php echo $form->dropDownList($model, 'type' , DataList::model()->types()); ?>
+            <?php echo $form->dropDownListControlGroup($model, 'type' , DataList::model()->types()); ?>
 
             <?php echo $form->textFieldControlGroup($model,'name',array('span'=>5,'maxlength'=>255)); ?>
 
             <?php echo $form->textFieldControlGroup($model,'position',array('span'=>5,'empty'=>0)); ?>
 
         <div class="form-actions">
-        <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(
+        <?php echo TbHtml::submitButton($model->isNewRecord ? Yii::t('DataListModule.main','Create') : Yii::t('DataListModule.main','Save'),array(
 		    'color'=>TbHtml::BUTTON_COLOR_PRIMARY,
 		    'size'=>TbHtml::BUTTON_SIZE_LARGE,
 		)); ?>

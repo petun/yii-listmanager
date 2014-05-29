@@ -5,16 +5,15 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Data Lists',
+	Yii::t('DataListModule.main','Data Lists'),
 );
 
 $this->menu=array(
-	array('label'=>'Create DataList','url'=>array('create')),
-	array('label'=>'Manage DataList','url'=>array('admin')),
+	array('label'=>Yii::t('DataListModule.main','New Item List'),'url'=>array('create')),
 );
 ?>
 
-<h1>Data Lists</h1>
+<h1><?=Yii::t('DataListModule.main','Data Lists');?></h1>
 	<div class="search-form">
 		<?php $this->renderPartial('_search',array(
 			'model'=>$model,
