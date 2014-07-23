@@ -10,12 +10,16 @@
  * @property string  $name
  * @property integer $position
  */
-class DataList extends ActiveRecord
+class DataList extends GxActiveRecord
 {
 
 	/* for giix improvement*/
-	public function label($count) {
+	public static function label($n = 1) {
 		return "Списки";
+	}
+
+	public static function representingColumn() {
+		return 'name';
 	}
 
 	/**
